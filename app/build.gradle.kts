@@ -51,25 +51,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-
-    // Core
-    implementation(libs.androidx.core.ktx.v180)
-
-    // Appcompat
-    implementation(libs.androidx.appcompat.v142)
-
-    // Material Design Components
-    implementation(libs.material.v161)
-
-    // UI Components
-    implementation(libs.androidx.constraintlayout)
-
-    // Navigation
-    val  nav_version = "2.4.2"
-    implementation(libs.androidx.navigation.fragment.ktx.v242)
-    implementation (libs.androidx.navigation.ui.ktx.v242)
-
-    // ViewBindingPropertyDelegate | | To use only without reflection variants of viewBinding
-    implementation (libs.viewbindingpropertydelegate.noreflection)
 }
