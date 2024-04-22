@@ -15,6 +15,17 @@
         app:destination="@id/mainFlowFragment"
         app:popUpTo="@id/nav_graph" />
 
+    <fragment
+        android:id="@+id/mainFlowFragment"
+        android:name="com.awb.flowtest.ui.flow.MainFlowFragment"
+        android:label="flow_fragment_main"
+        tools:layout="@layout/flow_fragment_main" />
+
+    <fragment
+        android:id="@+id/signFlowFragment"
+        android:name="com.awb.flowtest.ui.flow.SignFlowFragment"
+        android:label="flow_fragment_sign"
+        tools:layout="@layout/flow_fragment_sign" />
 
 
 </navigation>
