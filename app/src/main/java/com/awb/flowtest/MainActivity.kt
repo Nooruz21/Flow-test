@@ -1,13 +1,9 @@
 package com.awb.flowtest
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.fragment.NavHostFragment
 import com.awb.flowtest.databinding.ActivityMainBinding
 import com.awb.flowtest.ui.UserData
 
@@ -34,11 +30,11 @@ class MainActivity : AppCompatActivity() {
             UserData.isAuthorized -> {
                 navGraph.setStartDestination(R.id.mainFlowFragment)
             }
+
             !UserData.isAuthorized -> {
                 navGraph.setStartDestination(R.id.signFlowFragment)
             }
         }
         navController.graph = navGraph
-    }
     }
 }
