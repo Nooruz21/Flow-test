@@ -35,6 +35,7 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
         }
         //большой фикс локализация
         //большая фича логике
+            // мелкие фиксы
     }
 
     private fun clickSignUp() {
