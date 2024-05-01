@@ -34,6 +34,7 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
             activityNavController().navigateSafely(R.id.action_global_mainFlowFragment)
         }
         //большой фикс локализация
+        //большая фича логике
     }
 
     private fun clickSignUp() {
