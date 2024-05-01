@@ -33,6 +33,10 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
             UserData.isAuthorized = true
             activityNavController().navigateSafely(R.id.action_global_mainFlowFragment)
         }
+        //большой фикс локализация
+        //большая фича логике
+            // мелкие фиксы
+        //hotfix
     }
 
     private fun clickSignUp() {
