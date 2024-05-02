@@ -37,6 +37,9 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
         //большая фича логике
             // мелкие фиксы
         //hotfix
+
+
+            //da
     }
 
     private fun clickSignUp() {
