@@ -41,8 +41,8 @@ android {
         viewBinding = true
     }
 }
-tasks.dokkaHtml {
-    outputDirectory.set(layout.buildDirectory.dir("documentation/html"))
+tasks.dokkaHtml.configure {
+    outputDirectory.set(file("../documentation/html"))
 }
 tasks.dokkaHtml.configure {
     dokkaSourceSets {
@@ -59,11 +59,6 @@ tasks.dokkaHtml.configure {
             pluginsMapConfiguration.set(
                 mapOf("org.jetbrains.dokka.base.DokkaBase" to """{ "separateInheritedMembers": true }""")
             )
-            perPackageOption {
-                matchingRegex.set("com.awb.flowtest.ui.*")
-                suppress.set(false) // Ensure UI components are fully documented
-                includeNonPublic.set(true) // Optionally include non-public members for detailed internal documentation
-            }
         }
     }
 }
