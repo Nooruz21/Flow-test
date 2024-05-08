@@ -3,7 +3,9 @@ $dokka.linkExtension:html
 $dokka.location:com.awb.flowtest.ui.base////PointingToDeclaration/app/com.awb.flowtest.ui.base/index.html
 $dokka.location:com.awb.flowtest.ui.base/BaseFlowFragment///PointingToDeclaration/app/com.awb.flowtest.ui.base/-base-flow-fragment/index.html
 $dokka.location:com.awb.flowtest.ui.base/BaseFlowFragment/BaseFlowFragment/#kotlin.Int#kotlin.Int/PointingToDeclaration/app/com.awb.flowtest.ui.base/-base-flow-fragment/-base-flow-fragment.html
+$dokka.location:com.awb.flowtest.ui.base/BaseFlowFragment/navController/#/PointingToDeclaration/app/com.awb.flowtest.ui.base/-base-flow-fragment/nav-controller.html
 $dokka.location:com.awb.flowtest.ui.base/BaseFlowFragment/onViewCreated/#android.view.View#android.os.Bundle?/PointingToDeclaration/app/com.awb.flowtest.ui.base/-base-flow-fragment/on-view-created.html
+$dokka.location:com.awb.flowtest.ui.base/BaseFlowFragment/setupNavigation/#/PointingToDeclaration/app/com.awb.flowtest.ui.base/-base-flow-fragment/setup-navigation.html
 $dokka.location:com.awb.flowtest.ui.dashboard////PointingToDeclaration/app/com.awb.flowtest.ui.dashboard/index.html
 $dokka.location:com.awb.flowtest.ui.dashboard/DashboardFragment///PointingToDeclaration/app/com.awb.flowtest.ui.dashboard/-dashboard-fragment/index.html
 $dokka.location:com.awb.flowtest.ui.dashboard/DashboardFragment/DashboardFragment/#/PointingToDeclaration/app/com.awb.flowtest.ui.dashboard/-dashboard-fragment/-dashboard-fragment.html
@@ -15,6 +17,7 @@ $dokka.location:com.awb.flowtest.ui.dashboard/DashboardViewModel/text/#/Pointing
 $dokka.location:com.awb.flowtest.ui.flow////PointingToDeclaration/app/com.awb.flowtest.ui.flow/index.html
 $dokka.location:com.awb.flowtest.ui.flow/MainFlowFragment///PointingToDeclaration/app/com.awb.flowtest.ui.flow/-main-flow-fragment/index.html
 $dokka.location:com.awb.flowtest.ui.flow/MainFlowFragment/MainFlowFragment/#/PointingToDeclaration/app/com.awb.flowtest.ui.flow/-main-flow-fragment/-main-flow-fragment.html
+$dokka.location:com.awb.flowtest.ui.flow/MainFlowFragment/setupNavigation/#/PointingToDeclaration/app/com.awb.flowtest.ui.flow/-main-flow-fragment/setup-navigation.html
 $dokka.location:com.awb.flowtest.ui.flow/SignFlowFragment///PointingToDeclaration/app/com.awb.flowtest.ui.flow/-sign-flow-fragment/index.html
 $dokka.location:com.awb.flowtest.ui.flow/SignFlowFragment/SignFlowFragment/#/PointingToDeclaration/app/com.awb.flowtest.ui.flow/-sign-flow-fragment/-sign-flow-fragment.html
 $dokka.location:com.awb.flowtest.ui.home////PointingToDeclaration/app/com.awb.flowtest.ui.home/index.html
@@ -52,6 +55,7 @@ $dokka.location:com.awb.flowtest/FeatureFlags/enableFeature/#kotlin.String/Point
 $dokka.location:com.awb.flowtest/FeatureFlags/isFeatureEnabled/#kotlin.String/PointingToDeclaration/app/com.awb.flowtest/-feature-flags/is-feature-enabled.html
 $dokka.location:com.awb.flowtest/MainActivity///PointingToDeclaration/app/com.awb.flowtest/-main-activity/index.html
 $dokka.location:com.awb.flowtest/MainActivity/MainActivity/#/PointingToDeclaration/app/com.awb.flowtest/-main-activity/-main-activity.html
+$dokka.location:com.awb.flowtest/MainActivity/onCreate/#android.os.Bundle?/PointingToDeclaration/app/com.awb.flowtest/-main-activity/on-create.html
 com.awb.flowtest
 com.awb.flowtest.ui
 com.awb.flowtest.ui.base
