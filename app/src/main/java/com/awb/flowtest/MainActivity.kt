@@ -20,6 +20,12 @@ class MainActivity : AppCompatActivity() {
         setupNavigation()
     }
 
+    /**
+     * Setup navigation инициализация навигации также перехеод по авторизации
+     *
+     *
+     */
+
     private fun setupNavigation() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment

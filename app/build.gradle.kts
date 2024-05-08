@@ -1,6 +1,10 @@
+import org.jetbrains.dokka.DokkaConfiguration
+import org.jetbrains.dokka.gradle.DokkaTask
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("org.jetbrains.dokka")
 }
 
 android {
@@ -37,7 +41,63 @@ android {
         viewBinding = true
     }
 }
-
+tasks.dokkaHtml {
+    outputDirectory.set(layout.buildDirectory.dir("documentation/html"))
+}
+tasks.dokkaHtml.configure {
+    dokkaSourceSets {
+        named("main") {
+            skipDeprecated.set(true)
+            includeNonPublic.set(false)
+            skipEmptyPackages.set(true)
+            reportUndocumented.set(true)
+            documentedVisibilities.set(setOf(DokkaConfiguration.Visibility.PUBLIC, DokkaConfiguration.Visibility.PROTECTED))
+            perPackageOption {
+                matchingRegex.set(".*internal.*")
+                suppress.set(true)
+            }
+            pluginsMapConfiguration.set(
+                mapOf("org.jetbrains.dokka.base.DokkaBase" to """{ "separateInheritedMembers": true }""")
+            )
+            perPackageOption {
+                matchingRegex.set("com.awb.flowtest.ui.*")
+                suppress.set(false) // Ensure UI components are fully documented
+                includeNonPublic.set(true) // Optionally include non-public members for detailed internal documentation
+            }
+        }
+    }
+}
+/*tasks.withType<DokkaTask>().configureEach {
+//Создает карту конфигурации, указывая, что унаследованные члены должны отображаться отдельно.
+    pluginsMapConfiguration.set(
+        mapOf("org.jetbrains.dokka.base.DokkaBase" to """{ "separateInheritedMembers": true}""")
+    )
+    dokkaSourceSets.configureEach {
+        //  не включать в документацию непубличные элементы (такие как private и internal классы и методы).
+        includeNonPublic.set(false)
+        // пропустить пакеты, которые не содержат документируемых элементов, что помогает избежать создания пустых разделов в документации.
+        skipEmptyPackages.set(true)
+        // пропустить устаревшие (deprecated) элементы при генерации документации.
+        skipDeprecated.set(true)
+        //Призывает Dokka выдавать предупреждения о публичных элементах, которые не имеют документационных комментариев, что может помочь улучшить качество документации.
+        reportUndocumented.set(true)
+//        Определяет уровни доступа элементов, которые должны быть включены в документацию. В данном случае включены только публичные элементы
+        documentedVisibilities.set(
+            setOf(
+                DokkaConfiguration.Visibility.PUBLIC,
+                DokkaConfiguration.Visibility.PRIVATE,
+                DokkaConfiguration.Visibility.PROTECTED
+            )
+        )
+         // perPackageOption: Позволяет настроить параметры документации для определенных пакетов.
+        perPackageOption {
+           //Применяет настройки к пакетам, имена которых соответствуют данному регулярному выражению. В этом случае к любым пакетам, содержащим слово "internal".
+            matchingRegex.set(".*internal.*")
+//            Указывает Dokka не документировать содержимое этих пакетов.
+            suppress.set(true)
+        }
+    }
+}*/
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -66,10 +126,13 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
 
     // Navigation
-    val  nav_version = "2.4.2"
+    val nav_version = "2.4.2"
     implementation(libs.androidx.navigation.fragment.ktx.v242)
-    implementation (libs.androidx.navigation.ui.ktx.v242)
+    implementation(libs.androidx.navigation.ui.ktx.v242)
 
     // ViewBindingPropertyDelegate | | To use only without reflection variants of viewBinding
-    implementation (libs.viewbindingpropertydelegate.noreflection)
+    implementation(libs.viewbindingpropertydelegate.noreflection)
+
+    dokkaPlugin("org.jetbrains.dokka:android-documentation-plugin:1.9.20")
+
 }

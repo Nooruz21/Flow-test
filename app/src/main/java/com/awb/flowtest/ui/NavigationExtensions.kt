@@ -7,8 +7,17 @@ import androidx.navigation.NavDirections
 import androidx.navigation.findNavController
 import com.awb.flowtest.R
 
+/**
+ * Activity nav controller
+ *
+ */
 fun Fragment.activityNavController() = requireActivity().findNavController(R.id.nav_host_fragment)
 
+/**
+ * Navigate safely for sdadfsadfasdf
+ *
+ * @param actionId
+ */
 fun NavController.navigateSafely(@IdRes actionId: Int) {
     currentDestination?.getAction(actionId)?.let { navigate(actionId) }
 }
