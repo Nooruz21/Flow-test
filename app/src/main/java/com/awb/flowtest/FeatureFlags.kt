@@ -3,7 +3,7 @@ package com.awb.flowtest
 /**
  * Feature flags
  *
- * @constructor Create empty Feature flags
+ * @constructor Создает feature флаг
  */
 object FeatureFlags {
     private val flags = mutableMapOf<String, Boolean>()
@@ -32,7 +32,7 @@ object FeatureFlags {
     /**
      * кликабельная или не кликабельная
      *
-     * @param featureName
+     * @param featureName - ожидания ключа
      * @return true if feature enabled
      */
     fun isFeatureEnabled(featureName: String): Boolean {

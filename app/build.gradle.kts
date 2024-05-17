@@ -51,14 +51,18 @@ tasks.dokkaHtml.configure {
             includeNonPublic.set(false)
             skipEmptyPackages.set(true)
             reportUndocumented.set(true)
-            documentedVisibilities.set(setOf(DokkaConfiguration.Visibility.PUBLIC, DokkaConfiguration.Visibility.PROTECTED))
+            documentedVisibilities.set(setOf(DokkaConfiguration.Visibility.PUBLIC, DokkaConfiguration.Visibility.PROTECTED,DokkaConfiguration.Visibility.PRIVATE))
             perPackageOption {
                 matchingRegex.set(".*internal.*")
                 suppress.set(true)
             }
+//            pluginsMapConfiguration.set(
+//                mapOf("org.jetbrains.dokka.base.DokkaBase" to """{ "separateInheritedMembers": true }""")
+//            )
             pluginsMapConfiguration.set(
-                mapOf("org.jetbrains.dokka.base.DokkaBase" to """{ "separateInheritedMembers": true }""")
+                mapOf("org.jetbrains.dokka.base.DokkaBase" to """{ "separateInheritedMembers": false }""")
             )
+
         }
     }
 }
